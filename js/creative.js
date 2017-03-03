@@ -1,3 +1,4 @@
+
 var paperMenu = {
     $window: $('#paper-window'),
     $paperFront: $('#paper-front'),
@@ -49,9 +50,6 @@ var paperMenu = {
         this.bindEvents();
         this.updateTransformOrigin();
     },
-
-
-
 };
 paperMenu.init();
 
