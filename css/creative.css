@@ -4,7 +4,7 @@ body {
 #paper-back {
   width: 100%;
   height: 100vh;
-  background-color: #243040;
+  background-color: #2F4F4F;
   position: fixed;
   top: 0;
   left: 0;
@@ -108,7 +108,7 @@ body {
   pointer-events: auto;
   position: relative;
   z-index: 3;
-  background-color: #fff;
+  background-color: #FFF;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   -webkit-transform-origin: center 70%;
           transform-origin: center 70%;
@@ -118,7 +118,7 @@ body {
 #container section {
   height: 680px;
   text-align: center;
-  background-image: url(../img/back1.jpg);
+  background-image: url(../img/bgf.jpg);
   background-size: cover;
   background-attachment: fixed;
 
@@ -187,7 +187,7 @@ i{
   display: block;
   width: 45px;
   height: 6px;
-  background-color: #243040;
+  background-color: #2F4F4F;
   border-radius: 2px;
 }
 .hamburger span:before, .hamburger span:after {
@@ -234,6 +234,294 @@ box-sizing {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+.grid {
+  overflow: hidden;
+  margin: 0;
+  padding: 3em 0 0 0;
+  width: 100%;
+  max-width: 1920px;
+  list-style: none;
+  text-align: center;
+}
+
+/* Common style */
+.grid figure {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  overflow: hidden;
+  margin: -0.135em;
+  width: 33.333%;
+  height: 400px;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.grid figure h2 {
+  word-spacing: -0.15em;
+  
+  font-weight: 300;
+}
+
+.grid figure h2 span {
+  font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+  margin: 0;
+}
+
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+
+figure.effect-lily figcaption {
+  top: auto;
+  bottom: 0;
+  height: 10%;
+  text-align: center;
+}
+
+figure.effect-lily h2,
+figure.effect-lily p {
+  -webkit-transform: translate3d(0,40px,0);
+  transform: translate3d(0,40px,0);
+}
+
+figure.effect-lily h2 {
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+}
+
+figure.effect-lily p {
+  color: rgba(255,255,255,0.6);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+  transition: opacity 0.2s, transform 0.35s;
+}
+
+figure.effect-lily:hover img,
+figure.effect-lily:hover p {
+  opacity: 1;
+}
+
+figure.effect-lily:hover img,
+figure.effect-lily:hover h2,
+figure.effect-lily:hover p {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+figure.effect-lily:hover p {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+}
+
+
+/* about me */
+.logo-container {
+  width: 80px;
+  height: 180px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.square {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 20px;
+}
+
+.face-top {
+  -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
+          transform: rotate(-45deg) skew(15deg, 15deg);
+}
+
+.side {
+  -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
+          transform: rotate(-45deg) skew(15deg, 15deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.side-2 {
+  -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
+          transform: rotate(-45deg) skew(15deg, 15deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.square-one {
+  background: #009999;
+  z-index: 5;
+  top: 104px;
+  -webkit-animation: ascend-1 1s 0.5s 1 forwards;
+          animation: ascend-1 1s 0.5s 1 forwards;
+}
+
+.square-two {
+  background: #00cccc;
+  top: 104px;
+  z-index: 4;
+  -webkit-animation: ascend-2 0.8s 0.5s 1 forwards;
+          animation: ascend-2 0.8s 0.5s 1 forwards;
+}
+
+.square-three {
+  background: #006666;
+  top: 104px;
+}
+
+.square-four {
+  background: #009999;
+  top: 104px;
+  left: 44px;
+  -webkit-animation: morph-1 0.6s 0.6s 1 forwards ease-in-out;
+          animation: morph-1 0.6s 0.6s 1 forwards ease-in-out;
+}
+
+.square-five {
+  background: #006666;
+  top: 25px;
+  left: 0px;
+  opacity: 0;
+  -webkit-animation: morph-2 0.6s 1.1s 1 forwards ease-in-out;
+          animation: morph-2 0.6s 1.1s 1 forwards ease-in-out;
+}
+
+@-webkit-keyframes ascend-1 {
+  0% {
+    top: 104px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes ascend-1 {
+  0% {
+    top: 104px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@-webkit-keyframes ascend-2 {
+  0% {
+    top: 104px;
+  }
+  100% {
+    top: 52px;
+  }
+}
+@keyframes ascend-2 {
+  0% {
+    top: 104px;
+  }
+  100% {
+    top: 52px;
+  }
+}
+@-webkit-keyframes morph-1 {
+  0% {
+    -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
+            transform: rotate(-45deg) skew(15deg, 15deg);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) skew(-45deg, 15deg);
+            transform: rotate(-45deg) skew(-45deg, 15deg);
+    height: 37px;
+    top: 118px;
+  }
+}
+@keyframes morph-1 {
+  0% {
+    -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
+            transform: rotate(-45deg) skew(15deg, 15deg);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) skew(-45deg, 15deg);
+            transform: rotate(-45deg) skew(-45deg, 15deg);
+    height: 37px;
+    top: 118px;
+  }
+}
+@-webkit-keyframes morph-2 {
+  0% {
+    -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
+            transform: rotate(-45deg) skew(15deg, 15deg);
+    opacity: 0;
+  }
+  98% {
+    opacity: 1;
+  }
+  100% {
+    top: 26px;
+    left: 1px;
+    -webkit-transform: rotate(-15deg) skew(-15deg, -15deg);
+            transform: rotate(-15deg) skew(-15deg, -15deg);
+    opacity: 1;
+  }
+}
+@keyframes morph-2 {
+  0% {
+    -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
+            transform: rotate(-45deg) skew(15deg, 15deg);
+    opacity: 0;
+  }
+  98% {
+    opacity: 1;
+  }
+  100% {
+    top: 26px;
+    left: 1px;
+    -webkit-transform: rotate(-15deg) skew(-15deg, -15deg);
+            transform: rotate(-15deg) skew(-15deg, -15deg);
+    opacity: 1;
+  }
+}
+
 .description {
   padding: 6em 5em;
 }
@@ -275,114 +563,152 @@ box-sizing {
     }
 
 /*Skills*/
+@import url(https://fonts.googleapis.com/css?family=Orbitron:400,900);
+.box_skill {
+  max-width: 800px;
+  width: 100%;
+  margin: 40px auto;
+  padding-bottom: 15px;
+}
+.box_skill .skill {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 50px;
+  width: 10px;
+  height: 250px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.box_skill .skill span {
+  position: absolute;
+  transform: rotate(-90deg);
+  left: 0;
+  bottom: -20px;
+  height: 85px;
+  width: 30px;
+  color: #000;
+  letter-spacing: 8px;
+}
+.box_skill .skill:nth-child(1) {
+  background-color: #ffb399;
+  height: 50px;
+  animation: jsAnim 2s ease 5s 1 forwards;
+}
+.box_skill .skill:nth-child(1):before {
+  content: "";
+  width: 15px;
+  height: 250px;
+  z-index: -1;
+  left: 5px;
+  position: absolute;
+  background-color: #800000;
+  height: 50px;
+  animation: jsAnim 2s ease 5s 1 forwards;
+}
+.box_skill .skill:nth-child(2) {
+  background-color: #c2c2a3;
+  height: 50px;
+  animation: htmlAnim 2s ease 5s 1 forwards;
+}
+.box_skill .skill:nth-child(2):before {
+  content: "";
+  width: 15px;
+  height: 250px;
+  z-index: -1;
+  left: 5px;
+  position: absolute;
+  background-color: #3d3d29;
+  height: 50px;
+  animation: htmlAnim 2s ease 5s 1 forwards;
+}
+.box_skill .skill:nth-child(3) {
+  background-color: #e6ac00;
+  height: 50px;
+  animation: cssAnim 2s ease 5s 1 forwards;
+}
+.box_skill .skill:nth-child(3):before {
+  content: "";
+  width: 15px;
+  height: 250px;
+  z-index: -1;
+  left: 5px;
+  position: absolute;
+  background-color: #cc9900;
+  height: 50px;
+  animation: cssAnim 2s ease 5s 1 forwards;
+}
+.box_skill .skill:nth-child(4) {
+  background-color: #609f9f;
+  height: 40px;
+  animation: cssAnim 2s ease 5s 1 forwards;
+}
+.box_skill .skill:nth-child(4):before {
+  content: "";
+  width: 15px;
+  height: 250px;
+  z-index: -1;
+  left: 5px;
+  position: absolute;
+  background-color: #2f4f4f;
+  height: 40px;
+  animation: cssAnim 2s ease 5s 1 forwards;
+}
+.box_skill .col {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 50px;
+  width: 10px;
+  height: 250px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  height: 360px;
+  width: 1px;
+}
+.box_skill .col span {
+  position: absolute;
+  transform: rotate(-90deg);
+  left: 0;
+  bottom: -20px;
+  height: 85px;
+  width: 30px;
+  color: #949494;
+  letter-spacing: 8px;
+}
+.box_skill .bxText {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-top: 40px;
+}
+@keyframes jsAnim {
+  from {
+    height: 35px;
+  }
+  to {
+    height: 300px;
+  }
+}
+@keyframes htmlAnim {
+  from {
+    height: 55px;
+  }
+  to {
+    height: 350px;
+  }
+}
+@keyframes cssAnim {
+  from {
+    height: 45px;
+  }
+  to {
+    height: 320px;
+  }
+}
 
 /*Skills*
-.skill-card {
-  position: absolute;
-  -webkit3transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
-  padding: 20px;
-  width: 15em;
-  background-color: #FFF;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  cursor: pointer;
-}
-.skill-card:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-.skill-card:hover .skill-card__header {
-  height: 40px;
-}
-.skill-card:hover .skill-card__header .skill-card__icon {
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(3);
-          transform: translateX(-50%) translateY(-50%) scale(3);
-}
-.skill-card:hover .skill-card__body {
-  height: 170px;
-}
-.skill-card:hover .skill-card__body .skill-card__knowledge li {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition-timing-function: cubic-bezier(0, 1.5, 1, 1);
-          transition-timing-function: cubic-bezier(0, 1.5, 1, 1);
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-}
-.skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(1) {
-  -webkit-transition-delay: 0.25s;
-          transition-delay: 0.25s;
-}
-.skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(2) {
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
-}
-.skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(3) {
-  -webkit-transition-delay: 0.75s;
-          transition-delay: 0.75s;
-}
-.skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(4) {
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
-}
-.skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(5) {
-  -webkit-transition-delay: 1.25s;
-          transition-delay: 1.25s;
-}
-.skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(6) {
-  -webkit-transition-delay: 1.5s;
-          transition-delay: 1.5s;
-}
-.skill-card .skill-card__header {
-  position: relative;
-  background-color: #eb6c3f;
-  height: 170px;
-  margin: -20px -20px 20px -20px;
-  -webkit-transition: height 0.5s;
-  transition: height 0.5s;
-  overflow: hidden;
-}
-.skill-card .skill-card__header .skill-card__icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
-  display: block;
-  width: 128px;
-  height: 128px;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
-.skill-card .skill-card__body {
-  height: 40px;
-  -webkit-transition: height 0.5s;
-  transition: height 0.5s;
-  overflow: hidden;
-}
-.skill-card .skill-card__body .skill-card__title {
-  font-size: 1.4em;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.skill-card .skill-card__body .skill-card__duration {
-  color: #9E9E9E;
-  font-style: italic;
-}
-.skill-card .skill-card__body .skill-card__knowledge {
-  margin-top: 10px;
-  color: #424242;
-}
-.skill-card .skill-card__body .skill-card__knowledge li {
-  margin-top: 5px;
-  -webkit-transition-duration: 0;
-          transition-duration: 0;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
 
 */
 /*/*proyectos*/
@@ -508,3 +834,20 @@ box-sizing {
     border: none;
   }
 }
+@media (max-width: 900px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (max-width: 700px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+
